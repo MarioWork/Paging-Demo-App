@@ -9,7 +9,7 @@ public class UserServiceClient {
 
     private static Retrofit retrofit;
 
-    public UserServiceClient() {
+   private static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new Retrofit
                     .Builder()
@@ -18,9 +18,10 @@ public class UserServiceClient {
                     .build();
         }
 
+        return retrofit;
     }
 
     public static IUserService getUserService() {
-        return retrofit.create(IUserService.class);
+        return getRetrofitInstance().create(IUserService.class);
     }
 }

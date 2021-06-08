@@ -13,9 +13,11 @@ public class UserModel {
     @SerializedName("last_name")
     private String lastName;
 
+    @SerializedName("email")
+    private String email;
+
     @SerializedName("avatar")
     private String profilePicture;
-
 
 
     //Getters
@@ -35,4 +37,7 @@ public class UserModel {
         return lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
 }

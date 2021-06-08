@@ -38,6 +38,9 @@ public class UsersAdapter extends PagedListAdapter<UserModel, UsersAdapter.Users
         holder.binding.idTextView.setText("ID: "+getItem(position).getId());
 
         holder.binding.nameTextView.setText("Name: "+getItem(position).getName()+" "+getItem(position).getLastName());
+
+        holder.binding.emailTextView.setText("Email: "+getItem(position).getEmail());
+
     }
 
 
